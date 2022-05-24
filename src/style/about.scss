@@ -1,0 +1,25 @@
+.about-wrapper {
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+    font-family: 'Original Surfer', cursive;
+    font-size: 30px;
+    background-color: rgb(69, 153, 225);
+    
+    .chosing-section {
+        padding-left: 50px;
+        padding-right: 50px;
+
+    }
+    
+    .top-picture {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .bottom-picture {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+}

@@ -1,0 +1,18 @@
+.home-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(69, 153, 225);
+  
+    .welcome-section{
+     
+      padding: 10px;
+      font-family: 'Original Surfer', cursive;
+      
+    }
+    .h2{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
