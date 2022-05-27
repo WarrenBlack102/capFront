@@ -3,12 +3,15 @@
 	justify-content: space-evenly;
 	align-items: center;
 	width: 100vw;
+	
+	background-color: rgb(195, 226, 241);
+	
 
 	
 	
 }
 
-.links-wrapper {
+.tabs-wrapper {
 	display: flex;
 	align-items: center;
 	justify-items: auto;
@@ -16,12 +19,9 @@
 	color: blue;
 }
 
-.nav-item {
-	color: white;
-}
 
 
-.navbarLinks {
+.tabs {
 	color: blue;
 	margin: 0px 5px;
 	padding: 3px 6px;
@@ -38,7 +38,7 @@
 	justify-content: center;
 	align-items: center;
 	flex-wrap: inherit;
-	width: 50vw;
+	margin-right: 350px;
 	img {
 		border-radius: 35px;
 		width: 150px;

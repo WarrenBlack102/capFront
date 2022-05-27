@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
-import { Navbar, Nav, NavItem } from "reactstrap";
-import logo from "../../../capfront/static/assets/images/Warren's Surf Shop -01.jpg";
+import logo from "../../../capfront/static/assets/images/Warren's Surf Shop -02.jpg";
 
 export default class Navigation extends Component {
     constructor() {
@@ -11,34 +10,25 @@ export default class Navigation extends Component {
     render() {
         return (
             <div className="navigation-wrapper">
-                <Navbar>
-                    <div className="links-wrapper">
-                        <Nav navbar>
-                            <NavItem>
-                                <NavLink exact to="/" className="navbarLinks">
-                                    Home
-                                </NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink to="/about/" className="navbarLinks">
-                                    About
-                                </NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink to="/contact" className="navbarLinks">
-                                    Contact
-                                </NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink to="/surfboard" className="navbarLinks">
-                                    Surfboards
-                                </NavLink>
-                            </NavItem>
 
-                        </Nav>
+                <div className="tabs-wrapper">
+                    <NavLink exact to="/" className="tabs">
+                        Home
+                    </NavLink>
 
-                    </div>
-                </Navbar>
+                    <NavLink to="/about/" className="tabs">
+                        About
+                    </NavLink>
+
+                    <NavLink to="/contact" className="tabs">
+                        Contact
+                    </NavLink>
+
+                    <NavLink to="/surfboard" className="tabs">
+                        Surfboards
+                    </NavLink>
+                </div>
+
                 <div className="img-wrapper">
 
                     <img src={logo} />
@@ -46,9 +36,9 @@ export default class Navigation extends Component {
                 </div>
 
                 <div className="contact-column">
-                    <div class="address-wrapper">
+                    <div className="address-wrapper">
                         <p>Located in Seaside Park, </p>
-                            <p>New Jersey  </p>
+                        <p>New Jersey  </p>
                     </div>
 
                 </div>

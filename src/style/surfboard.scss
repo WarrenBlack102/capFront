@@ -1,10 +1,13 @@
 .items-page-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    background-color: rgb(69, 153, 225);
+    background-color: white;
     justify-content: space-between;
     padding: 75px;
     font-family: 'Original Surfer', cursive;
+    background-color: rgb(107, 176, 236);
+    font-size: 20px;
+
     
 
     .h2 {
@@ -13,8 +16,21 @@
 
     .items-wrapper {
         padding-left: 50px;
+        border: seashell 2px;
+
+        .img {
+        border-radius: 25px;
         
+      
+        }
     }   
     
 
+}
+
+.img {
+    border-radius: 25px;
+    
+    
+  
 }

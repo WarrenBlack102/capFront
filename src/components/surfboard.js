@@ -58,7 +58,7 @@ export default class Items extends Component {
         else if (this.state.error) {
             return (
                 <div className='items-page-wrapper'>
-                    <h2>Surfboards I have made in the past</h2>
+                    <h2>Oh No! Something went wrong. Please check back soon</h2>
                     <div className='items-wrapper'>
                         <div className="error">An error occured... Please try again later.</div>
                     </div>
@@ -69,7 +69,7 @@ export default class Items extends Component {
         else {
             return (
                 <div className='items-page-wrapper'>
-                    <h2 style={{textAlign: "center"}}>Here is a list of surfboards I have made in the past for clients. These are just examples of the work I am capable of creating for you. I am adding to this list with every board I build. If you would like a style that resembles anyone of these boards, please add the name of the board in the message section of the contact page. </h2>
+                    <h2 style={{textAlign: "center"}}>Here is a list of surfboards I have made in the past for clients. These are just examples of the work I am capable of creating for you. I am adding to this list with every board I build. If you would like a style that resembles any of these boards, please add the name of the board in the message section of the contact page. </h2>
                         <div className="items-wrapper">
                             {this.renderItems()}
                         </div>

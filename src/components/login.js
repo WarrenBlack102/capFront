@@ -3,8 +3,8 @@ import axios from "axios";
 import React, { Component } from "react";
 
 export default class login extends Component {
-    constructor(props) {
-        super(props);
+    constructor() {
+        super();
         this.state = {
             name: "",
             type: "",
@@ -17,50 +17,46 @@ export default class login extends Component {
 
     handleChange(event) {
         this.setState({
-            [event.target.name]: event.target.value,
-            errorText: ""
+            [event.target.name]: event.target.value
         });
     }
 
     handleSubmit(event) {
-        axios.post("http://127.0.0.1:5000/surfboard/add", {
-            method: "POST",
-            headers: { "content-type": "application/json" },
-            body: JSON.stringify({
-                name: this.state.name,
-                type: this.state.type,
-                item_img: this.state.item_img,
-            }),
-        })
-            .then((response) => {
-                console.log("Successful Submission", response);
-                response.json();
-            })
-            .then((data) => {
-                console.log("Data", data);
-                this.setState({
-                    name: "",
-                    type: "",
-                    item_img: "",
-                });
-            })
-
-            .catch((error) => {
-                console.log("Error with Submission", error);
-            });
+        
+            fetch("http://127.0.0.1:5000/surfboard/add", {
+                 method: "POST",
+                 headers: { "content-type": "application/json" },
+                 body: JSON.stringify({
+                     name: this.state.name,
+                     type: this.state.type,
+                     item_img: this.state.item_img})
+                    }
+                    ).then(response => response.json())
+                    .then(data=> {
+                        console.log("",data)
+                        this.setState({
+                            name: "",
+                            type: "",
+                            item_img: ""
+                        })
+                    })
+                    .catch((error) => console.log("Error adding surfboard", error));
 
         event.preventDefault();
-    }
+    }    
+    
+    
+
 
     render() {
         return (
             <div>
-                <h1>FORM FOR ADDING SURFBOARDS TO API</h1>
                 <div className="add-surfboard-wrapper">
+                <h1>FORM FOR ADDING SURFBOARDS TO API</h1>
                     <div className="instructions-wrapper">Fill in the surfboard information below</div>
                     <div className="textbox-wrapper">
                         <form
-                            className="add-item-form"
+                            className="add-surfboard-form"
                             onSubmit={this.handleSubmit}
                         >
                             <div className="name">
@@ -75,12 +71,12 @@ export default class login extends Component {
                                 />
                             </div>
                             <div className="type">
-                                <h3>Style Type: </h3>
+                                <h3>Style Type and Discription: </h3>
                                 <input
                                     type="text"
                                     name="type"
                                     className="type-input"
-                                    placeholder="Surfboard Style Type"
+                                    placeholder="Style Type and Discription"
                                     value={this.state.type}
                                     onChange={this.handleChange}
                                 />

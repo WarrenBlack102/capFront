@@ -1,18 +1,34 @@
 .home-wrapper {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
     background-color: rgb(69, 153, 225);
+   
   
     .welcome-section{
      
       padding: 10px;
       font-family: 'Original Surfer', cursive;
-      
+      color: whitesmoke;
+      width: 552px;
     }
     .h2{
       display: flex;
       justify-content: center;
       align-items: center;
+      text-size-adjust: none;
+      
     }
   }
+
+  @media (max-width: 800px) {
+	.home-wrapper {
+		margin: 10px 0;
+	}
+
+	.welcome-section {
+		flex-direction: column;
+		align-items: stretch;
+	}
+}
+

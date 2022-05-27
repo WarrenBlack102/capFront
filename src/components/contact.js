@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
 
+
+
 export default class Contact extends Component {
   constructor() {
     super();
@@ -41,31 +43,36 @@ export default class Contact extends Component {
 
     event.preventDefault();
 
-    
+
   }
 
   render() {
     return (
       <div className="form-wrapper">
-        <h2 style={{textAlign: "center"}}>I respond to messages at the end of every work day. Please fill out the form below and I will message you about the details of your next surfboard.</h2>
 
-        <form class="form-inline" action="https://submit-form.com/XTbDsk1A">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" placeholder="Name" required="" />
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" placeholder="Email" required="" />
-          <label for="email">Phone Number</label>
-          <input type="phone" id="phone" name="phone" placeholder="Phone Number" required="" />
-          <label for="message">Message</label>
-          <textarea
-            id="message"
-            name="message"
-            placeholder="Message"
-            required=""
-          ></textarea>
-          <button type="submit">Send</button>
-        </form>
-      </div>
-    );
+       
+
+
+          <h1 style={{ textAlign: "center", color: "black" }}>I respond to messages at the end of every work day. Please fill out the form below and I will message you about the details of your next surfboard. Remember to add your size and experience level if you are unsure of the board dimensions you need.</h1>
+
+          <form class="form-inline" action="https://submit-form.com/XTbDsk1A">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Name" required="" />
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Email" required="" />
+            <label for="email">Phone Number</label>
+            <input type="phone" id="phone" name="phone" placeholder="Phone Number" required="" />
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Message"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+              required=""
+            ></textarea>
+            <button type="submit">Send</button>
+          </form>
+        </div>
+      
+        );
   }
 }
