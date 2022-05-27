@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
-import logo from "../../../capfront/static/assets/images/Warren's Surf Shop -02.jpg";
+// import logo from "../../../capfront/static/assets/images/Warren's Surf Shop -02.jpg";
 
 export default class Navigation extends Component {
     constructor() {
@@ -31,7 +31,7 @@ export default class Navigation extends Component {
 
                 <div className="img-wrapper">
 
-                    <img src={logo} />
+                    {/* <img src={logo} /> */}
 
                 </div>
 
