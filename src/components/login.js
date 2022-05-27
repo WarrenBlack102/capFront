@@ -22,37 +22,38 @@ export default class login extends Component {
     }
 
     handleSubmit(event) {
-        
-            fetch("http://127.0.0.1:5000/surfboard/add", {
-                 method: "POST",
-                 headers: { "content-type": "application/json" },
-                 body: JSON.stringify({
-                     name: this.state.name,
-                     type: this.state.type,
-                     item_img: this.state.item_img})
-                    }
-                    ).then(response => response.json())
-                    .then(data=> {
-                        console.log("",data)
-                        this.setState({
-                            name: "",
-                            type: "",
-                            item_img: ""
-                        })
-                    })
-                    .catch((error) => console.log("Error adding surfboard", error));
+
+        fetch("https://warrens-surf-shop-back.herokuapp.com/surfboard/add", {
+            method: "POST",
+            headers: { "content-type": "application/json" },
+            body: JSON.stringify({
+                name: this.state.name,
+                type: this.state.type,
+                item_img: this.state.item_img
+            })
+        }
+        ).then(response => response.json())
+            .then(data => {
+                console.log("", data)
+                this.setState({
+                    name: "",
+                    type: "",
+                    item_img: ""
+                })
+            })
+            .catch((error) => console.log("Error adding surfboard", error));
 
         event.preventDefault();
-    }    
-    
-    
+    }
+
+
 
 
     render() {
         return (
             <div>
                 <div className="add-surfboard-wrapper">
-                <h1>FORM FOR ADDING SURFBOARDS TO API</h1>
+                    <h1>FORM FOR ADDING SURFBOARDS TO API</h1>
                     <div className="instructions-wrapper">Fill in the surfboard information below</div>
                     <div className="textbox-wrapper">
                         <form

@@ -14,7 +14,7 @@ export default class Items extends Component {
    
 
     componentDidMount() {
-        fetch("http://127.0.0.1:5000/surfboard/get")
+        fetch("https://warrens-surf-shop-back.herokuapp.com/surfboard/get")
         .then(response => response.json())
         .then(data => {
             this.setState({
